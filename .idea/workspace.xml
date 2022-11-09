@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/SensorReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCountJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/JobStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/JobStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/WebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/WebServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

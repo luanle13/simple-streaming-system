@@ -8,12 +8,13 @@ import java.util.List;
 
 public abstract class ComponentExecutor extends Process {
     private final Component _component;
-    protected final List<Event> eventCollector = new ArrayList<Event>();
+    protected final List<Event> eventCollector;
     protected EventQueue incomingQueue = null;
     protected EventQueue outgoingQueue = null;
 
     ComponentExecutor(Component component) {
         this._component = component;
+        this.eventCollector = new ArrayList<Event>();
     }
 
     public Component getComponent() {

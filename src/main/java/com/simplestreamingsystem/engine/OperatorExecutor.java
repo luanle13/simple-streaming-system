@@ -21,6 +21,7 @@ public class OperatorExecutor extends ComponentExecutor {
         }
 
         _operator.apply(event, eventCollector);
+//        eventCollector.add(event);
 
         try {
             for (Event output: eventCollector) {

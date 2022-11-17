@@ -25,10 +25,7 @@ public class TaxCalculator extends Operator {
     public void apply(Event event, List<Event> eventCollector) {
         String vehicle = ((VehicleEvent)event).getData();
         Integer tax = this._taxPrice.get(vehicle);
-
-        _totalTax += tax;
-    }
-    private void printTotalTax() {
-        System.out.println("Total Tax: " + _totalTax);
+        System.out.println("Tax: " + tax);
+        eventCollector.add(event);
     }
 }

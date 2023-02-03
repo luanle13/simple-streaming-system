@@ -6,26 +6,25 @@ import com.simplestreamingsystem.api.Event;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class ComponentExecutor extends Process {
+public abstract class ComponentExecutor {
     private final Component _component;
-    protected final List<Event> eventCollector;
-    protected EventQueue incomingQueue = null;
-    protected EventQueue outgoingQueue = null;
+    protected InstanceExecutor[] instanceExecutors;
 
     ComponentExecutor(Component component) {
         this._component = component;
-        this.eventCollector = new ArrayList<Event>();
+        int parallelism = component.getParallelism();
+        this.instanceExecutors = new InstanceExecutor[parallelism];
     }
-
+    public abstract void start();
+    public InstanceExecutor[] getInstanceExecutors() {
+        return instanceExecutors;
+    }
     public Component getComponent() {
         return _component;
     }
-
-    public void setIncomingQueue(EventQueue queue) {
-        incomingQueue = queue;
-    }
-
-    public void setOutgoingQueue(EventQueue queue) {
-        outgoingQueue = queue;
+    public void setIncomingQueues(EventQueue[] queues) {
+        for (int i = 0; i < queues.length; i++) {
+            instanceExecutors[i].setIncomingQueue(queues[i]);
+        }
     }
 }

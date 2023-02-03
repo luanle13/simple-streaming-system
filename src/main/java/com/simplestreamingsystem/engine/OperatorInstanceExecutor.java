@@ -2,20 +2,15 @@ package com.simplestreamingsystem.engine;
 
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Operator;
-import org.apache.commons.lang3.SerializationUtils;
 
-public class OperatorExecutor extends ComponentExecutor {
-    private final Operator _operator;
-
-    public OperatorExecutor(Operator operator) {
-        super(operator);
-        this._operator = operator;
-        for (int i  = 0; i < operator.getParallelism(); i++) {
-            Operator cloned = SerializationUtils.clone(operator);
-            instanceExecutors[i] = new OperatorExecutor(i, cloned);
-        }
+public class OperatorInstanceExecutor extends InstanceExecutor {
+    private final int instanceId;
+    private final Operator operator;
+    public OperatorInstanceExecutor(int instanceId,, Operator operator) {
+        this.instanceId = instanceId;
+        this.operator = operator;
+        operator.setupInstance(instanceId);
     }
-
     @Override
     boolean runOnce() {
         Event event;
@@ -24,10 +19,7 @@ public class OperatorExecutor extends ComponentExecutor {
         } catch (InterruptedException e) {
             return false;
         }
-
-        _operator.apply(event, eventCollector);
-//        eventCollector.add(event);
-
+        operator.apply(event, eventCollector);
         try {
             for (Event output: eventCollector) {
                 outgoingQueue.put(output);
@@ -36,7 +28,6 @@ public class OperatorExecutor extends ComponentExecutor {
         } catch (InterruptedException e) {
             return false;
         }
-
         return true;
     }
 }

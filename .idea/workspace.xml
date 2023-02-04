@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/ComponentExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/ComponentExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/OperatorExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/OperatorExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/TaxCalculateJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/JobStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/JobStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/OperatorInstanceExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/OperatorInstanceExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/TaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCountJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCountJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,7 +41,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/Documents/GitHub/simple-streaming-system&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/School/simple-streaming-system&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -65,16 +65,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/engine/JobStarter.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

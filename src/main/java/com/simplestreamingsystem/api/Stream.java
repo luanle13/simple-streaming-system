@@ -1,10 +1,11 @@
 package com.simplestreamingsystem.api;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Stream {
+public class Stream implements Serializable {
     private final Set<Operator> operatorSet = new HashSet<Operator>();
 
     public Stream applyOperator(Operator operator) {

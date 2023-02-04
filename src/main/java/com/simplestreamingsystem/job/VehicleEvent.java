@@ -2,7 +2,7 @@ package com.simplestreamingsystem.job;
 
 import com.simplestreamingsystem.api.Event;
 
-public class VehicleEvent extends Event {
+public class VehicleEvent implements Event {
     private final String _type;
 
     public VehicleEvent(String type) {

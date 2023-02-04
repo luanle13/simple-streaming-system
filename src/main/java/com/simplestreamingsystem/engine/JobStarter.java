@@ -3,7 +3,6 @@ package com.simplestreamingsystem.engine;
 import com.simplestreamingsystem.api.*;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -12,6 +11,7 @@ public class JobStarter {
 
     private final Job _job;
     private final List<ComponentExecutor> _executorList = new ArrayList<ComponentExecutor>();
+    private final List<EventDispatcher> _dispatcherList = new ArrayList<EventDispatcher>();
     private final List<Connection> _connectionList = new ArrayList<Connection>();
 
     public JobStarter(Job job) {
@@ -20,7 +20,7 @@ public class JobStarter {
 
     public void start() {
         setupComponentExecutors();
-        setupConections();
+        setupConnections();
         startProcesses();
         new WebServer(_job.getName(), _connectionList).start();
     }
@@ -33,7 +33,7 @@ public class JobStarter {
         }
     }
 
-    private void setupConections() {
+    private void setupConnections() {
         for (Connection connection: _connectionList) {
             connectExecutors(connection);
         }
@@ -44,12 +44,24 @@ public class JobStarter {
         for (ComponentExecutor executor: _executorList) {
             executor.start();
         }
+        for (EventDispatcher dispatcher: _dispatcherList) {
+            dispatcher.start();
+        }
     }
 
     private void connectExecutors(Connection connection) {
-        EventQueue intermediateQueue = new EventQueue(QUEUE_SIZE);
-        connection.from.setOutgoingQueue(intermediateQueue);
-        connection.to.setIncomingQueue(intermediateQueue);
+        EventDispatcher dispatcher = new EventDispatcher(connection.to);
+        _dispatcherList.add(dispatcher);
+        EventQueue upstream = new EventQueue(QUEUE_SIZE);
+        connection.from.setOutgoingQueue(upstream);
+        dispatcher.setIncomingQueue(upstream);
+        int parallelism = connection.to.getComponent().getParallelism();
+        EventQueue[] downstream = new EventQueue[parallelism];
+        for (int i = 0; i < parallelism; i++) {
+            downstream[i] = new EventQueue(QUEUE_SIZE);
+        }
+        connection.to.setIncomingQueues(downstream);
+        dispatcher.setOutgoingQueues(downstream);
     }
 
     private void traverseComponent(Component component, ComponentExecutor executor) {

@@ -2,37 +2,28 @@ package com.simplestreamingsystem.engine;
 
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Source;
+import org.apache.commons.lang3.SerializationUtils;
 
 public class SourceExecutor extends ComponentExecutor {
-    private final Source _source;
-
     public SourceExecutor(Source source) {
         super(source);
-        this._source = source;
+        for (int i = 0; i < source.getParallelism(); i++) {
+            Source cloned = SerializationUtils.clone(source);
+            instanceExecutors[i] = new SourceInstanceExecutor(i, cloned);
+        }
     }
 
     @Override
-    boolean runOnce() {
-        try {
-            _source.getEvents(eventCollector);
-        } catch (Exception e) {
-            return false;
-        }
-
-        try {
-            for (Event event: eventCollector) {
-                outgoingQueue.put(event);
+    public void start() {
+        if (instanceExecutors != null) {
+            for (InstanceExecutor executor: instanceExecutors) {
+                executor.start();
             }
-            eventCollector.clear();
-        } catch (InterruptedException e) {
-            return false;
         }
-
-        return true;
     }
 
     @Override
-    public void setIncomingQueue(EventQueue queue) {
+    public void setIncomingQueues(EventQueue[] queues) {
         throw new RuntimeException("No incoming queue is allowed for source executor");
     }
 }

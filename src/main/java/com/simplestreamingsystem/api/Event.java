@@ -1,5 +1,5 @@
 package com.simplestreamingsystem.api;
 
-public abstract class Event {
-    public abstract Object getData();
+public interface Event {
+    Object getData();
 }

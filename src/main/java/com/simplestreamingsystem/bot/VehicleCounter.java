@@ -1,4 +1,4 @@
-package com.simplestreamingsystem.job;
+package com.simplestreamingsystem.bot;
 
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.GroupingStrategy;
@@ -21,7 +21,7 @@ public class VehicleCounter extends Operator {
 
     @Override
     public void apply(Event event, List<Event> eventCollector) {
-        String vehicle = ((VehicleEvent)event).getData();
+        String vehicle = ((VehicleEvent)event).getData().type;
         Integer count = _counter.getOrDefault(vehicle,0) + 1;
         _counter.put(vehicle, count);
         System.out.println("VehicleCounter --> ");

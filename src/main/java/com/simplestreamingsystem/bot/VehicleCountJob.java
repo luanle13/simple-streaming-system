@@ -1,4 +1,4 @@
-package com.simplestreamingsystem.job;
+package com.simplestreamingsystem.bot;
 
 //import com.simplestreamingsystem.api.Job;
 //import com.simplestreamingsystem.api.Stream;

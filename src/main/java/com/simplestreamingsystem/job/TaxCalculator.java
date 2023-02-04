@@ -1,6 +1,7 @@
 package com.simplestreamingsystem.job;
 
 import com.simplestreamingsystem.api.Event;
+import com.simplestreamingsystem.api.GroupingStrategy;
 import com.simplestreamingsystem.api.Operator;
 
 import java.util.HashMap;
@@ -16,9 +17,15 @@ public class TaxCalculator extends Operator {
        put("container", 50000);
     }};
     private Integer _totalTax = 0;
+    private int _instance = 0;
 
-    public TaxCalculator(String name) {
-        super(name);
+    public TaxCalculator(String name, int parallelism, GroupingStrategy groupingStrategy) {
+        super(name, parallelism, groupingStrategy);
+    }
+
+    @Override
+    public void setupInstance(int instance) {
+        this._instance = instance;
     }
 
     @Override

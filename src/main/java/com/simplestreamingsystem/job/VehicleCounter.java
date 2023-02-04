@@ -1,15 +1,22 @@
 package com.simplestreamingsystem.job;
 
 import com.simplestreamingsystem.api.Event;
+import com.simplestreamingsystem.api.GroupingStrategy;
 import com.simplestreamingsystem.api.Operator;
 
 import java.util.*;
 
 public class VehicleCounter extends Operator {
     private final Map<String, Integer> _counter = new HashMap<String, Integer>();
+    private int _instance = 0;
 
-    public VehicleCounter(String name) {
-        super(name);
+    public VehicleCounter(String name, int parallelism, GroupingStrategy groupingStrategy) {
+        super(name, parallelism, groupingStrategy);
+    }
+
+    @Override
+    public void setupInstance(int instance) {
+        this._instance = instance;
     }
 
     @Override

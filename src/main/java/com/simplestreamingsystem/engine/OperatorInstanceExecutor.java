@@ -4,12 +4,12 @@ import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Operator;
 
 public class OperatorInstanceExecutor extends InstanceExecutor {
-    private final int instanceId;
-    private final Operator operator;
-    public OperatorInstanceExecutor(int instanceId,, Operator operator) {
-        this.instanceId = instanceId;
-        this.operator = operator;
-        operator.setupInstance(instanceId);
+    private final int _instanceId;
+    private final Operator _operator;
+    public OperatorInstanceExecutor(int instanceId, Operator _operator) {
+        this._instanceId = instanceId;
+        this._operator = _operator;
+        _operator.setupInstance(_instanceId);
     }
     @Override
     boolean runOnce() {
@@ -19,7 +19,7 @@ public class OperatorInstanceExecutor extends InstanceExecutor {
         } catch (InterruptedException e) {
             return false;
         }
-        operator.apply(event, eventCollector);
+        _operator.apply(event, eventCollector);
         try {
             for (Event output: eventCollector) {
                 outgoingQueue.put(output);

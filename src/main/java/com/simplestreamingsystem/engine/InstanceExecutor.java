@@ -15,7 +15,7 @@ public abstract class InstanceExecutor extends Process {
     public void setIncomingQueue(EventQueue queue) {
         incomingQueue = queue;
     }
-    public void addOutgoingQueue(String channel, EventQueue queue) {
+    public void setOutgoingQueue(EventQueue queue) {
         outgoingQueue = queue;
     }
 }

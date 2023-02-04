@@ -12,11 +12,20 @@ import java.net.UnknownHostException;
 import java.util.List;
 
 public class SensorReader extends Source {
-    private final BufferedReader _reader;
+    private int _instance = 0;
+    private BufferedReader _reader;
+    private Socket _socket;
+    private final int _portBase;
 
-    public SensorReader(String name, int port) {
-        super(name);
-        _reader = setupSocketReader(port);
+    public SensorReader(String name, int parallelism, int port) {
+        super(name, parallelism);
+        this._portBase = port;
+    }
+
+    @Override
+    public void setupInstance(int instance) {
+        this._instance = instance;
+        setupSocketReader(_portBase + _instance);
     }
 
     @Override
@@ -34,11 +43,11 @@ public class SensorReader extends Source {
         }
     }
 
-    private BufferedReader setupSocketReader(int port) {
+    private void setupSocketReader(int port) {
         try {
-            Socket socket = new Socket("localhost", port);
-            InputStream inputStream = socket.getInputStream();
-            return new BufferedReader(new InputStreamReader(inputStream));
+            _socket = new Socket("localhost", port);
+            InputStream inputStream = _socket.getInputStream();
+            _reader = new BufferedReader(new InputStreamReader(inputStream));
         } catch (UnknownHostException e) {
             e.printStackTrace();
             System.exit(0);
@@ -46,6 +55,5 @@ public class SensorReader extends Source {
             e.printStackTrace();
             System.exit(0);
         }
-        return null;
     }
 }

@@ -1,4 +1,4 @@
-package com.simplestreamingsystem.job;
+package com.simplestreamingsystem.bot;
 
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.GroupingStrategy;
@@ -30,7 +30,7 @@ public class TaxCalculator extends Operator {
 
     @Override
     public void apply(Event event, List<Event> eventCollector) {
-        String vehicle = ((VehicleEvent)event).getData();
+        String vehicle = ((VehicleEvent)event).getData().type;
         Integer tax = this._taxPrice.get(vehicle);
         System.out.println("Tax: " + tax);
 //        eventCollector.add(event);

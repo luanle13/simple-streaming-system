@@ -1,7 +1,10 @@
-package com.simplestreamingsystem.job;
+package com.simplestreamingsystem.goverment;
 
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Source;
+import com.simplestreamingsystem.bot.VehicleInfor;
+import com.simplestreamingsystem.goverment.penalty.PenaltyEvent;
+import com.simplestreamingsystem.goverment.penalty.PenaltyInfor;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,13 +14,13 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.List;
 
-public class SensorReader extends Source {
+public class ServerReader extends Source {
     private int _instance = 0;
     private BufferedReader _reader;
     private Socket _socket;
     private final int _portBase;
 
-    public SensorReader(String name, int parallelism, int port) {
+    public ServerReader(String name, int parallelism, int port) {
         super(name, parallelism);
         this._portBase = port;
     }
@@ -31,13 +34,27 @@ public class SensorReader extends Source {
     @Override
     public void getEvents(List<Event> eventCollector) {
         try {
-            String vehicle = _reader.readLine();
-            if (vehicle == null) {
+            String[] rawData = _reader.readLine().split(" ", 5);
+
+            VehicleInfor vehicle = new VehicleInfor(rawData[0], rawData[1], rawData[2]);
+            PenaltyInfor penaltyInfor = new PenaltyInfor(
+                    rawData[4],
+                    vehicle,
+                    Integer.parseInt(rawData[3])
+            );
+
+            if (penaltyInfor == null) {
                 System.exit(0);
             }
-            eventCollector.add(new VehicleEvent(vehicle));
+            eventCollector.add(new PenaltyEvent(penaltyInfor));
             System.out.println("");
-            System.out.println("SensorReader --> " + vehicle);
+            System.out.println("ServerReader --> " +
+                    penaltyInfor.vehicleInfor.type + "/" +
+                    penaltyInfor.vehicleInfor.carLicensePlates + "/" +
+                    penaltyInfor.vehicleInfor.ownerPhoneNumber + "/" +
+                    "TAX (receive from BOT): " + penaltyInfor.taxValue + "----------" +
+                    "PENALTY TYPE: " + penaltyInfor.type
+            );
         } catch (IOException e) {
             System.out.println("Failed to read input: " + e);
         }

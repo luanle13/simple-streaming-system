@@ -33,6 +33,6 @@ public class TaxCalculator extends Operator {
         String vehicle = ((VehicleEvent)event).getData();
         Integer tax = this._taxPrice.get(vehicle);
         System.out.println("Tax: " + tax);
-        eventCollector.add(event);
+//        eventCollector.add(event);
     }
 }

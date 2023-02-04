@@ -1,10 +1,8 @@
 package com.simplestreamingsystem.engine;
 
 import com.simplestreamingsystem.api.*;
-import org.eclipse.jetty.server.Dispatcher;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -22,7 +20,7 @@ public class JobStarter {
 
     public void start() {
         setupComponentExecutors();
-        setupConections();
+        setupConnections();
         startProcesses();
         new WebServer(_job.getName(), _connectionList).start();
     }
@@ -35,7 +33,7 @@ public class JobStarter {
         }
     }
 
-    private void setupConections() {
+    private void setupConnections() {
         for (Connection connection: _connectionList) {
             connectExecutors(connection);
         }
@@ -56,6 +54,7 @@ public class JobStarter {
         _dispatcherList.add(dispatcher);
         EventQueue upstream = new EventQueue(QUEUE_SIZE);
         connection.from.setOutgoingQueue(upstream);
+        dispatcher.setIncomingQueue(upstream);
         int parallelism = connection.to.getComponent().getParallelism();
         EventQueue[] downstream = new EventQueue[parallelism];
         for (int i = 0; i < parallelism; i++) {

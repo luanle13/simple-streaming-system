@@ -25,7 +25,7 @@ public abstract class ComponentExecutor {
     }
     public void setOutgoingQueue(EventQueue queue) {
         for (InstanceExecutor instance: instanceExecutors) {
-            instance.setIncomingQueue(queue);
+            instance.setOutgoingQueue(queue);
         }
     }
 }

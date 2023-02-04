@@ -10,6 +10,7 @@ public class Main {
         Job job = new Job("tax-calculate");
         Stream streetLaneStream = job.addSource(new SensorReader("sensor-reader", 1, 9990));
         streetLaneStream.applyOperator(new TaxCalculator("tax-calculator", 1, new FieldsGrouping()));
+//                .applyOperator(new VehicleCounter("vehicle-counter", 1, new FieldsGrouping()));
         JobStarter starter = new JobStarter(job);
         starter.start();
     }

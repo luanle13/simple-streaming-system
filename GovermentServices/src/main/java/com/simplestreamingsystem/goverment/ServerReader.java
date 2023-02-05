@@ -6,11 +6,13 @@ import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Source;
 import com.simplestreamingsystem.goverment.penalty.PenaltyEvent;
 import com.simplestreamingsystem.goverment.penalty.PenaltyInfor;
+import com.simplestreamingsystem.http_request.HttpRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -44,7 +46,7 @@ public class ServerReader extends Source {
     public void getEvents(List<Event> eventCollector) {
         try {
             String inp  =_reader.readLine();
-            System.out.println(inp);
+//            System.out.println(inp);
             String[] rawData = inp.split(" ", 5);
 
             /// EXAMPLE: car 48B1-48949 0931646221 20000
@@ -77,10 +79,12 @@ public class ServerReader extends Source {
 
     private void setupSocketReader(int port) {
         try {
-            ServerSocket serverSocket = new ServerSocket(9991);
-            Socket socket = serverSocket.accept();
-            InputStream inputStream = socket.getInputStream();
-            _reader = new BufferedReader(new InputStreamReader(inputStream));
+            if (HttpRequest.requestOpenSocket(port, "server","admin") == HttpURLConnection.HTTP_OK) {
+                Socket socket = new Socket("localhost", port);
+                System.out.println(socket);
+                InputStream inputStream = socket.getInputStream();
+                _reader = new BufferedReader(new InputStreamReader(inputStream));
+            }
         } catch (UnknownHostException e) {
             e.printStackTrace();
             System.exit(0);

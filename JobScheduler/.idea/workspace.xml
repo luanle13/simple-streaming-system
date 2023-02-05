@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/http_request/HttpRequest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/http_request/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOTServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/pom.xml" afterDir="false" />
@@ -43,11 +46,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/rowan/School/Software_Architecture/simple-streaming-system/GovermentServices",
+    "last_opened_file_path": "/home/rowan/School/Software_Architecture/simple-streaming-system/JobScheduler",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -60,16 +64,23 @@
       <recent name="D:\School\simple-streaming-system\src\main\java\com\simplestreamingsystem\job\JobInBOT" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.simplestreamingsystem.bot.Main" />
-      <module name="BOTServices" />
+      <option name="MAIN_CLASS_NAME" value="com.example.JobScheduler.JobSchedulerApplication" />
+      <module name="JobScheduler" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.simplestreamingsystem.goverment.penalty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JobSchedulerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="JobScheduler" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.JobScheduler.JobSchedulerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,7 +99,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667143429179</updated>
-      <workItem from="1675610790550" duration="13192000" />
+      <workItem from="1675609784537" duration="1507000" />
+      <workItem from="1675611609601" duration="19021000" />
     </task>
     <servers />
   </component>
@@ -105,5 +117,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

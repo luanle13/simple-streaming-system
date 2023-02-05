@@ -3,8 +3,10 @@ package com.simplestreamingsystem.bot;
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.GroupingStrategy;
 import com.simplestreamingsystem.api.Operator;
+import com.simplestreamingsystem.http_request.HttpRequest;
 
 import java.io.*;
+import java.net.HttpURLConnection;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -31,11 +33,14 @@ public class TaxCalculator extends Operator {
     public void setupInstance(int instance) {
         this._instance = instance;
         try {
-            this._socket = new Socket("localhost", 9991);
+            if (HttpRequest.requestOpenSocket(9992, "client", "admin") == HttpURLConnection.HTTP_OK) {
+                this._socket = new Socket("localhost", 9992);
+            }
         } catch (IOException e) {
             e.printStackTrace();
             System.exit(0);
         }
+        System.out.println(_socket);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.simplestreamingsystem.goverment;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.Source;
 import com.simplestreamingsystem.bot.VehicleInfor;
@@ -36,6 +38,9 @@ public class ServerReader extends Source {
         try {
             String[] rawData = _reader.readLine().split(" ", 5);
 
+            /// EXAMPLE: car 48B1-48949 0931646221 20000 ChayQuaTocDo
+            ///     Loại xe -> Biển số -> SDT -> Tiền phí BOT từ BOT gửi về -> Lỗi vi phạm
+
             VehicleInfor vehicle = new VehicleInfor(rawData[0], rawData[1], rawData[2]);
             PenaltyInfor penaltyInfor = new PenaltyInfor(
                     rawData[4],
@@ -47,14 +52,23 @@ public class ServerReader extends Source {
                 System.exit(0);
             }
             eventCollector.add(new PenaltyEvent(penaltyInfor));
-            System.out.println("");
-            System.out.println("ServerReader --> " +
-                    penaltyInfor.vehicleInfor.type + "/" +
-                    penaltyInfor.vehicleInfor.carLicensePlates + "/" +
-                    penaltyInfor.vehicleInfor.ownerPhoneNumber + "/" +
-                    "TAX (receive from BOT): " + penaltyInfor.taxValue + "----------" +
-                    "PENALTY TYPE: " + penaltyInfor.type
-            );
+//            System.out.println("");
+//            System.out.println("ServerReader --> " +
+//                    penaltyInfor.vehicleInfor.type + "/" +
+//                    penaltyInfor.vehicleInfor.carLicensePlates + "/" +
+//                    penaltyInfor.vehicleInfor.ownerPhoneNumber + "/" +
+//                    "TAX (receive from BOT): " + penaltyInfor.taxValue + "----------" +
+//                    "PENALTY TYPE: " + penaltyInfor.type
+//            );
+
+            Gson gson = new GsonBuilder()
+                    .setPrettyPrinting()
+                    .enableComplexMapKeySerialization()
+                    .create();
+
+            System.out.println("------------------------------");
+            System.out.println("SERVER READER ->");
+            System.out.println(gson.toJson(penaltyInfor));
         } catch (IOException e) {
             System.out.println("Failed to read input: " + e);
         }

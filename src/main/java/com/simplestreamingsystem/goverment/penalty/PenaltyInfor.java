@@ -3,12 +3,12 @@ package com.simplestreamingsystem.goverment.penalty;
 import com.simplestreamingsystem.bot.VehicleInfor;
 
 public class PenaltyInfor {
-    public String type;                 // Loại vi pham, Vi du: VuotDenDo, ChayQuaTocDo
+    public String penaltyType;                 // Loại vi pham, Vi du: VuotDenDo, ChayQuaTocDo
     public VehicleInfor vehicleInfor;   // xe vi pham
     public int taxValue;
 
-    public PenaltyInfor(String type, VehicleInfor vehicleInfor, int taxValue){
-        this.type = type;
+    public PenaltyInfor(String penaltyType, VehicleInfor vehicleInfor, int taxValue){
+        this.penaltyType = penaltyType;
         this.vehicleInfor = vehicleInfor;
         this.taxValue = taxValue;
     }

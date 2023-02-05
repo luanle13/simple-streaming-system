@@ -1,5 +1,7 @@
 package com.simplestreamingsystem.goverment.penalty;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.GroupingStrategy;
 import com.simplestreamingsystem.api.Operator;
@@ -38,6 +40,8 @@ public class PenaltyCalculator extends Operator {
 
         int penaltyId;
 
+        if (penaltyType.equals("")) return 0;
+
         if (penaltyType.equals("VuotDenDo")) penaltyId = 0;
         else if (penaltyType.equals("ChayQuaTocDo")) penaltyId = 1;
         else return -1;
@@ -49,13 +53,22 @@ public class PenaltyCalculator extends Operator {
     public void apply(Event event, List<Event> eventCollector) {
         PenaltyInfor penaltyInfor = ((PenaltyEvent)event).getData();
 
-        String penaltyType = penaltyInfor.type;
+        String penaltyType = penaltyInfor.penaltyType;
         String vehicleType = penaltyInfor.vehicleInfor.type;
 
         int penalty = getPenaltyPrice(vehicleType, penaltyType);
 
-        System.out.println("Penalty (Loại xe: " + vehicleType + " | " + "Vi phạm: " + penaltyType + ") " +
-                penalty);
+//        System.out.println("Penalty (Loại xe: " + vehicleType + " | " + "Vi phạm: " + penaltyType + ") " +
+//                penalty);
+
+        System.out.println("------------------------------");
+        System.out.println("PENALTY CALCULATOR: " + penalty);
+        Gson gson = new GsonBuilder()
+                .setPrettyPrinting()
+                .enableComplexMapKeySerialization()
+                .create();
+        System.out.println(gson.toJson(penaltyInfor));
+
 
         BankEvent bankEvent = new BankEvent(
                 new BankInfor(penaltyInfor.vehicleInfor,

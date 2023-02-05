@@ -5,25 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/VehicleInfor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/bank/BankEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/bank/BankInfor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/bank/BankRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/message/MessageEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/message/MessageInfor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/message/MessageShower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyInfor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/SensorReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/SensorReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCountJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/VehicleCountJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/VehicleCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/job/VehicleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/bot/VehicleEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/bank/BankRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/bank/BankRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/message/MessageShower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/message/MessageShower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyInfor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyInfor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +43,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/School/simple-streaming-system&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/School/GrokkingStreamingSystems&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -104,5 +93,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/simplestreamingsystem/goverment/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

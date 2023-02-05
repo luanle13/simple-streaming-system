@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleInput.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Simple Streaming System" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Component.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/FieldsGrouping.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/GroupingStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Job.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Operator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Source.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/api/Stream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/SensorReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/VehicleCountJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/VehicleCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/VehicleEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/bot/VehicleInfor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/ComponentExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/EventDispatcher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/EventQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/InstanceExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/JobStarter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/OperatorExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/OperatorInstanceExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/Process.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/SourceExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/SourceInstanceExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/engine/WebServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/bank/BankEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/bank/BankInfor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/bank/BankRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/message/MessageEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/message/MessageInfor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/message/MessageShower.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyInfor.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GrOqipQZoftaao9gJWv1ECvT6N" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/School/simple-streaming-system/BOTServices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\School\simple-streaming-system\src\main\java\com\simplestreamingsystem\job" />
+      <recent name="D:\School\simple-streaming-system\src\main\java\com\simplestreamingsystem\job\JobInBOT" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.simplestreamingsystem.goverment.Main" />
+      <module name="BaseSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simplestreamingsystem.goverment.penalty.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="" />
+      <created>1667143429179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667143429179</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

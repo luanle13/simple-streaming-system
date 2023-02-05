@@ -24,6 +24,7 @@ public class MessageShower extends Operator {
     public void apply(Event event, List<Event> eventCollector) {
         MessageInfor messageInfor = ((MessageEvent)event).getData();
 
+        System.out.println("------------------------------");
         if (messageInfor.isSuccess) {
             System.out.println("CHÚC MỪNG BẠN ĐÃ NỘP PHẠT THÀNH CÔNG");
         } else {

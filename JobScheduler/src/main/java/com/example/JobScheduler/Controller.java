@@ -57,6 +57,7 @@ public class Controller {
                             while (true) {
                                 if (_message != null) {
                                     writer.println(_message);
+                                    _message = null;
                                 }
                             }
                         }

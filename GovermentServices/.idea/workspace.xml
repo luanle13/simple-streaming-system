@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/http_request/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       <workItem from="1675598264910" duration="574000" />
       <workItem from="1675608885627" duration="665000" />
       <workItem from="1675610500823" duration="289000" />
-      <workItem from="1675619408488" duration="9643000" />
+      <workItem from="1675619408488" duration="10057000" />
     </task>
     <servers />
   </component>

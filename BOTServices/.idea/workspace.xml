@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/http_request/HttpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Authentication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/src/main/java/com/example/JobScheduler/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BootSystem.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../BootSystem.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GovermentServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/rowan/School/Software_Architecture/simple-streaming-system/GovermentServices",
+    "last_opened_file_path": "D:/School/simple-streaming-system/GovermentServices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

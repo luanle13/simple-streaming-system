@@ -40,7 +40,7 @@ public class PenaltyCalculator extends Operator {
 
         int penaltyId;
 
-        if (penaltyType.equals("")) return 0;
+        if (penaltyType.equals("KoViPham")) return 0;
 
         if (penaltyType.equals("VuotDenDo")) penaltyId = 0;
         else if (penaltyType.equals("ChayQuaTocDo")) penaltyId = 1;

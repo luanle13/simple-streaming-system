@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/School/simple-streaming-system/JobScheduler",
+    "last_opened_file_path": "D:/School/simple-streaming-system/BOTServices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

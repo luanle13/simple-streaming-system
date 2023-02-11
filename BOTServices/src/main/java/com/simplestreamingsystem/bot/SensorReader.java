@@ -14,46 +14,42 @@ import java.util.List;
 public class SensorReader extends Source {
     private int _instance = 0;
     private BufferedReader _reader;
-    private Socket _socket;
+    private transient WebcamQRCode _webcamQRCode;
+//    private Socket _socket;
     private final int _portBase;
 
     public SensorReader(String name, int parallelism, int port) {
         super(name, parallelism);
         this._portBase = port;
+
     }
 
     @Override
     public void setupInstance(int instance) {
         this._instance = instance;
-        setupSocketReader(_portBase + _instance);
+//        setupSocketReader(_portBase + _instance);
+        this._webcamQRCode = new WebcamQRCode();
     }
 
     @Override
     public void getEvents(List<Event> eventCollector) {
+        String qrResult = null;
         try {
-            VehicleInfor vehicle = new VehicleInfor(_reader.readLine());
+            qrResult = _webcamQRCode.getQRResult();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        if (qrResult != null) {
+            System.out.println(qrResult);
+            VehicleInfor vehicle = new VehicleInfor(qrResult);
             if (vehicle == null) {
                 System.exit(0);
             }
             eventCollector.add(new VehicleEvent(vehicle));
             System.out.println("");
             System.out.println("SensorReader --> " + vehicle.type);
-        } catch (IOException e) {
-            System.out.println("Failed to read input: " + e);
-        }
-    }
-
-    private void setupSocketReader(int port) {
-        try {
-            _socket = new Socket("localhost", port);
-            InputStream inputStream = _socket.getInputStream();
-            _reader = new BufferedReader(new InputStreamReader(inputStream));
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-            System.exit(0);
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.exit(0);
+            _webcamQRCode.setQRResult(null);
         }
     }
 }

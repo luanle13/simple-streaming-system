@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/SensorReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/SensorReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/WebcamQRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/WebcamQRCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

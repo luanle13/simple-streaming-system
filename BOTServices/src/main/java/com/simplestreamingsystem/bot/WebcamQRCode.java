@@ -93,8 +93,6 @@ public class WebcamQRCode extends JFrame implements Runnable, ThreadFactory {
                 if (!result.getText().equals(getQRResult())) {
                     setQRResult(result.getText());
                     textarea.setText(result.getText());
-                } else {
-                    setQRResult(null);
                 }
             }
         } while (true);

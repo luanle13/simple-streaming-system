@@ -16,6 +16,7 @@ public class SensorReader extends Source {
     private BufferedReader _reader;
     private transient WebcamQRCode _webcamQRCode;
 //    private Socket _socket;
+    private transient String _previousQr = null;
     private final int _portBase;
 
     public SensorReader(String name, int parallelism, int port) {
@@ -40,8 +41,8 @@ public class SensorReader extends Source {
             e.printStackTrace();
         }
 
-        if (qrResult != null) {
-            System.out.println(qrResult);
+        if (qrResult != null && !qrResult.equals(_previousQr)) {
+            _previousQr = qrResult;
             VehicleInfor vehicle = new VehicleInfor(qrResult);
             if (vehicle == null) {
                 System.exit(0);
@@ -49,7 +50,7 @@ public class SensorReader extends Source {
             eventCollector.add(new VehicleEvent(vehicle));
             System.out.println("");
             System.out.println("SensorReader --> " + vehicle.type);
-            _webcamQRCode.setQRResult(null);
+            //_webcamQRCode.setQRResult(null);
         }
     }
 }

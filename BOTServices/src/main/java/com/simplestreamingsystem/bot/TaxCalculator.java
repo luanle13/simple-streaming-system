@@ -46,8 +46,13 @@ public class TaxCalculator extends Operator {
     @Override
     public void apply(Event event, List<Event> eventCollector) {
         VehicleInfor vehicleInfor = ((VehicleEvent)event).getData();
-        String vehicle = vehicleInfor.type;
-        Integer tax = this._taxPrice.get(vehicle);
+        String vehicleType = vehicleInfor.type;
+
+        if (_taxPrice.containsKey(vehicleType) == false) {
+            return;
+        }
+
+        Integer tax = this._taxPrice.get(vehicleType);
         System.out.println("Tax: " + tax);
         try {
             PrintWriter out = new PrintWriter(_socket.getOutputStream(), true);

@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  loadbalancer:
+    build: ./JobScheduler
+    ports:
+      - "8080:8080"
+      - "9992:9992"
+      - "9991:9991"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080" ]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+    container_name: loadbalancer
+
+  # bot:
+  #   build: ./BOTServices
+  #   depends_on:
+  #     loadbalancer:
+  #       condition: service_healthy
+  #   restart: on-failure
+  #   container_name: bot
+  #   links:
+  #     - "loadbalancer"
+
+  government:
+    build: ./GovermentServices
+    depends_on:
+      loadbalancer:
+        condition: service_healthy
+    restart: on-failure
+    container_name: government
+    links:
+      - loadbalancer

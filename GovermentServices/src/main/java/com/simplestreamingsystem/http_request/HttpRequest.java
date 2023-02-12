@@ -7,7 +7,7 @@ import java.net.*;
 
 public class HttpRequest {
     public static int requestOpenSocket(int port, String type, String password) throws IOException {
-        URL url = new URL("http://localhost:8080/api/");
+        URL url = new URL("http://loadbalancer:8080/api/");
         HttpURLConnection con = (HttpURLConnection)url.openConnection();
         con.setRequestMethod("POST");
         con.setRequestProperty("Content-Type", "application/json");

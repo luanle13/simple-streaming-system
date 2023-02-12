@@ -81,7 +81,7 @@ public class ServerReader extends Source {
     private void setupSocketReader(int port) {
         try {
             if (HttpRequest.requestOpenSocket(port, "server","admin") == HttpURLConnection.HTTP_OK) {
-                Socket socket = new Socket("localhost", port);
+                Socket socket = new Socket("loadbalancer", port);
                 System.out.println(socket);
                 InputStream inputStream = socket.getInputStream();
                 _reader = new BufferedReader(new InputStreamReader(inputStream));

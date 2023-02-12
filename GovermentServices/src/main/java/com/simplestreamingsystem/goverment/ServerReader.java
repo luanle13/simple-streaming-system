@@ -55,7 +55,7 @@ public class ServerReader extends Source {
 
             VehicleInfor vehicle = new VehicleInfor(rawData[0], rawData[1], rawData[2]);
             PenaltyInfor penaltyInfor = new PenaltyInfor(
-                    (rawData[1] == "48" || rawData[1] == "72" ? ViPhamList.get(rawData[1]) : "KoViPham"),
+                    "",
                     vehicle,
                     Integer.parseInt(rawData[3])
             );
@@ -81,7 +81,7 @@ public class ServerReader extends Source {
     private void setupSocketReader(int port) {
         try {
             if (HttpRequest.requestOpenSocket(port, "server","admin") == HttpURLConnection.HTTP_OK) {
-                Socket socket = new Socket("localhost", port);
+                Socket socket = new Socket("loadbalancer", port);
                 System.out.println(socket);
                 InputStream inputStream = socket.getInputStream();
                 _reader = new BufferedReader(new InputStreamReader(inputStream));

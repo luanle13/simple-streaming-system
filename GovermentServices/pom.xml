@@ -7,6 +7,7 @@
     <groupId>com.simplestreamingsystem</groupId>
     <artifactId>SimpleStreamingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>GovermentServices</name>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -24,6 +25,11 @@
             <groupId>io.javalin</groupId>
             <artifactId>javalin</artifactId>
             <version>3.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

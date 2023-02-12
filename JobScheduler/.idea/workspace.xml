@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/SensorReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/SensorReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/WebcamQRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/WebcamQRCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/database/MongoDbRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/database/MongoDbRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/ServerReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GovermentServices/src/main/java/com/simplestreamingsystem/goverment/penalty/PenaltyCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +41,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/School/simple-streaming-system/GovermentServices&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/rowan/School/Software_Architecture/simple-streaming-system/GovermentServices&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,6 +50,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;a43cf27c8b946c6250359970a784b8b1&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -96,6 +97,10 @@
       <updated>1667143429179</updated>
       <workItem from="1675609784537" duration="1507000" />
       <workItem from="1675611609601" duration="23097000" />
+      <workItem from="1676105960921" duration="1717000" />
+      <workItem from="1676111568390" duration="2972000" />
+      <workItem from="1676123038961" duration="3029000" />
+      <workItem from="1676178103192" duration="3940000" />
     </task>
     <servers />
   </component>

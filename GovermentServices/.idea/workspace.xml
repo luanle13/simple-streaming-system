@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="625369ff-d657-4a5b-bb0d-7d4484c68764" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../JobScheduler/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BOTServices/src/main/java/com/simplestreamingsystem/bot/TaxCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JobScheduler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JobScheduler/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JobScheduler/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +93,7 @@
       <workItem from="1676123032498" duration="4000" />
       <workItem from="1676123977845" duration="7747000" />
       <workItem from="1676180887703" duration="3456000" />
+      <workItem from="1676188125409" duration="10045000" />
     </task>
     <servers />
   </component>

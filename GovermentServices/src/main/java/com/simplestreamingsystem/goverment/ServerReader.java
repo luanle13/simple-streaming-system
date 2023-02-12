@@ -55,7 +55,7 @@ public class ServerReader extends Source {
 
             VehicleInfor vehicle = new VehicleInfor(rawData[0], rawData[1], rawData[2]);
             PenaltyInfor penaltyInfor = new PenaltyInfor(
-                    (rawData[1] == "48" || rawData[1] == "72" ? ViPhamList.get(rawData[1]) : "KoViPham"),
+                    "",
                     vehicle,
                     Integer.parseInt(rawData[3])
             );

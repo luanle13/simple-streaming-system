@@ -1,26 +1,36 @@
 package com.simplestreamingsystem.database;
 
 import com.mongodb.ConnectionString;
-import com.mongodb.MongoClient;
+import com.mongodb.client.MongoClient;
 import com.mongodb.MongoClientSettings;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Projections;
 import kotlin.Pair;
 import org.bson.Document;
 import static com.mongodb.client.model.Filters.eq;
-import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MongoDbRepository {
+    private static MongoDbRepository intance;
+
+    public static MongoDbRepository getIntance(){
+        if (intance == null) {
+            intance = new MongoDbRepository();
+        }
+
+        return intance;
+    }
+
+    private MongoDbRepository(){}
+
+
     private final ConnectionString connectionString = new ConnectionString("mongodb+srv://admin:admin@government.vmttxnu.mongodb.net/?retryWrites=true&w=majority");
     private final MongoClientSettings settings = MongoClientSettings.builder().applyConnectionString(connectionString).build();
-    private final MongoClient mongoClient = (MongoClient) MongoClients.create(settings);
+    private final MongoClient mongoClient = MongoClients.create(settings);
     private final MongoDatabase database = mongoClient.getDatabase("violation");
     private final MongoCollection<Document> vehicleCollection = database.getCollection("vehicle");
     private final MongoCollection<Document> penaltyCollection = database.getCollection("penalty");

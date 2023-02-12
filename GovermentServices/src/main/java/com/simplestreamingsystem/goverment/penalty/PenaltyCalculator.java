@@ -5,13 +5,16 @@ import com.google.gson.GsonBuilder;
 import com.simplestreamingsystem.api.Event;
 import com.simplestreamingsystem.api.GroupingStrategy;
 import com.simplestreamingsystem.api.Operator;
+import com.simplestreamingsystem.database.MongoDbRepository;
 import com.simplestreamingsystem.goverment.bank.BankEvent;
 import com.simplestreamingsystem.goverment.bank.BankInfor;
+import kotlin.Pair;
 
 import java.util.List;
 
 public class PenaltyCalculator extends Operator {
     private int _instance = 0;
+//    private MongoDbRepository _mongoDbRepository;
 
     public PenaltyCalculator(String name, int parallelism, GroupingStrategy groupingStrategy) {
         super(name, parallelism, groupingStrategy);
@@ -20,6 +23,7 @@ public class PenaltyCalculator extends Operator {
     @Override
     public void setupInstance(int instance) {
         this._instance = instance;
+//        _mongoDbRepository = new MongoDbRepository();
     }
 
     private int[][] price = {
@@ -53,16 +57,14 @@ public class PenaltyCalculator extends Operator {
     public void apply(Event event, List<Event> eventCollector) {
         PenaltyInfor penaltyInfor = ((PenaltyEvent)event).getData();
 
-        String penaltyType = penaltyInfor.penaltyType;
-        String vehicleType = penaltyInfor.vehicleInfor.type;
-
-        int penalty = getPenaltyPrice(vehicleType, penaltyType);
+        Pair<Integer, String> penalty = MongoDbRepository.getIntance().getPenaltyByLicencePlate(penaltyInfor.vehicleInfor.carLicensePlates);
+//        int penaltyPrice = getPenaltyPrice(vehicleType, penaltyType);
 
 //        System.out.println("Penalty (Loại xe: " + vehicleType + " | " + "Vi phạm: " + penaltyType + ") " +
 //                penalty);
-
+        penaltyInfor.penaltyType = penalty.getSecond();
         System.out.println("------------------------------");
-        System.out.println("PENALTY CALCULATOR: " + penalty);
+        System.out.println("PENALTY CALCULATOR: " + penalty.getFirst());
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .enableComplexMapKeySerialization()
@@ -72,7 +74,7 @@ public class PenaltyCalculator extends Operator {
 
         BankEvent bankEvent = new BankEvent(
                 new BankInfor(penaltyInfor.vehicleInfor,
-                penalty + penaltyInfor.taxValue)
+                penalty.getFirst() + penaltyInfor.taxValue)
         );
 
         eventCollector.add(bankEvent);
